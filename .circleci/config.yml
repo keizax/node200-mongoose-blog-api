@@ -5,7 +5,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:11.15
 
-    working_directory: ~/jgnode200-ejs-portfolio
+    working_directory: ~/jgnode200-mongoose-blog-api
 
     steps:
       - checkout
