@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-// const MLAB_URI = process.env.MLAB_URI;
+const MLAB_URI = process.env.MLAB_URI;
 
-mongoose.connect('mongodb://@ds341837.mlab.com:41837/heroku_mcn2pcwq', { useNewUrlParser: true , 
+mongoose.connect(`mongodb://${MLAB_URI}`, { useNewUrlParser: true , 
   auth: {
     user: process.env.MONGO_USER,
     password: process.env.MONGO_PASSWORD
