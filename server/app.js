@@ -4,11 +4,11 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const MLAB_URI = process.env.MLAB_URI;
 
-mongoose.connect(`mongodb://${MLAB_URI}`, { useNewUrlParser: true , 
-  auth: {
-    user: process.env.MONGO_USER,
-    password: process.env.MONGO_PASSWORD
-  }},
+mongoose.connect('mongodb://test:test12@ds341837.mlab.com:41837/heroku_mcn2pcwq', { useNewUrlParser: true , 
+  // auth: {
+  //   user: process.env.MONGO_USER,
+  //   password: process.env.MONGO_PASSWORD}
+  },
   (err) => {
   if(err) {
     return console.log(err, 'An internal server error has occured');
